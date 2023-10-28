@@ -1,0 +1,231 @@
+/* Essential Setup */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Kaisei Decol", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Oswald", sans-serif;
+}
+
+main {
+	min-height: calc(100vh - 275px);
+}
+
+/* ===============================================
+				Theme Header Section
+================================================*/
+#header_area {
+	padding: 20px 0px;
+	margin-bottom: 20px;
+}
+/* =========== Logo =========== */
+#header_area #logo {
+	max-height: 120px;
+}
+
+/* =========== Dropdown Header Menu =========== */
+#header_area .col-md-9 {
+	display: flex;
+	align-items: center;
+}
+
+#header_area .col-md-9 ul {
+	font-family: "Oswald", sans-serif;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 10px;
+	padding: 0px;
+}
+
+#header_area .col-md-9 ul li {
+	position: relative;
+}
+
+#header_area .col-md-9 ul li a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 8px 15px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+#header_area .col-md-9 ul li a:hover {
+	background: #1100ff;
+	color: #fff;
+}
+
+#header_area .col-md-9 ul li ul {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: -9999999px;
+	content: "";
+	width: 200px;
+}
+
+#header_area .col-md-9 ul li:hover ul {
+	left: 0px;
+	z-index: 1;
+}
+
+#header_area .col-md-9 ul li ul li a {
+	display: block;
+	color: #fff;
+	background: #000;
+	border-radius: 0px;
+}
+
+#header_area .col-md-9 ul li ul li:first-child a {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#header_area .col-md-9 ul li ul li:last-child a {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* Sub Dropdown Menu */
+#header_area .col-md-9 ul li ul li ul,
+#header_area .col-md-9 ul li:hover ul li ul {
+	top: 0px;
+	left: -9999999px;
+	z-index: 2;
+}
+
+#header_area .col-md-9 ul li ul li:hover ul {
+	left: 200px;
+}
+/* Walker Menu Description */
+#header_area .col-md-9 ul li a span.walker_nav {
+	font-size: 13px;
+	display: block;
+	text-align: center;
+	font-family: "Kaisei Decol", serif;
+}
+
+/* =========== Change Menu Position =========== */
+/* Left Menu */
+#header_area.left_menu .col-md-3 {
+	order: 2;
+}
+
+#header_area.left_menu .col-md-9 {
+	order: 1;
+}
+
+#header_area.left_menu .col-md-9 ul {
+	justify-content: flex-start;
+}
+
+/* Center Menu */
+#header_area.center_menu .col-md-3 {
+	width: 1000%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#header_area.center_menu .col-md-9 {
+	justify-content: center;
+	width: 100%;
+}
+
+/* Right Menu */
+#header_area.right_menu .col-md-3 {
+	order: 1;
+}
+
+#header_area.right_menu .col-md-9 {
+	order: 2;
+}
+
+#header_area.right_menu .col-md-9 ul {
+	justify-content: flex-end;
+}
+
+/* ===============================================
+				Theme Index Style Section
+================================================*/
+.blog_area {
+	margin-bottom: 30px;
+	background: #d8d7d7;
+	padding: 20px;
+}
+
+.blog_area h2 {
+	margin-bottom: 15px;
+}
+
+.blog_area h2 a {
+	color: #222;
+	text-decoration: none;
+	transition: 0.2s all ease-in-out;
+}
+
+.blog_area h2 a:hover {
+	color: #1100ff;
+}
+
+.blog_area .post_thumb {
+	width: 100%;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.blog_area .post_thumb img {
+	width: 100%;
+	object-fit: cover;
+	transition: 0.3s all ease-in-out;
+}
+.blog_area .post_thumb:hover img {
+	transform: scale(1.1);
+}
+
+.blog_area .post_details {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.readmore-btn {
+	display: inline-block;
+	margin-top: 15px;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 15px;
+	background: #1100ff;
+	transition: 0.3s background ease-in-out;
+}
+
+.readmore-btn:hover {
+	background: #111;
+}
+
+/* ===============================================
+				Theme Footer Section
+================================================*/
+/* Footer Copyright Section */
+.footer_copyright {
+	padding: 20px 0px;
+	background: #333;
+	color: #fff;
+	text-align: center;
+}
+
+.footer_copyright .col-md-12 p {
+	font-size: 15px;
+	margin: 0px;
+}
